@@ -272,6 +272,9 @@ const ShoppingCart = () => {
                 >
                   <option value="">Select Coupon</option>
                   <option value="BLCKFRDY">BLCKFRDY</option>
+                  <option value="VOCLFRLOCL">VOCLFRLOCL</option>
+                  <option value="FRIENDS20">FRIENDS20</option>
+                  <option value="SHILPKAR20">SHILPKAR20</option>
                 </select>
                 {couponError ? (
                   <>
