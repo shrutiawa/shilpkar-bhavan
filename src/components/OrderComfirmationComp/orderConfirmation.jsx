@@ -15,6 +15,8 @@ const OrderConfirmation = () => {
   });
   const navigate = useNavigate();
   const REACT_APP_BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+  const { setCanAccessOrderConfirm } = useContext(LocaleContext);
+
 
   const fetchCartDetails = async () => {
     try {
@@ -69,6 +71,8 @@ const OrderConfirmation = () => {
   };
 
   useEffect(() => {
+    setCanAccessOrderConfirm(false);
+
     const processOrder = async () => {
       try {
         await fetchCartDetails();
