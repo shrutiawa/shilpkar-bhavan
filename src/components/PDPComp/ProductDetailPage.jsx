@@ -64,7 +64,7 @@ function ProductDetailPage() {
   };
 
   return (
-    <>
+    <div className="pdpMainContainer">
       <ToastContainer position="top-center" autoClose={1500} pauseOnHover />
       <div className="pdp-container">
         <button
@@ -128,7 +128,7 @@ function ProductDetailPage() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
