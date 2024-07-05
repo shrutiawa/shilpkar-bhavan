@@ -3,6 +3,13 @@
     padding: 0;
     margin: 0
   }
+
+  .pdpMainContainer{
+    height: calc(100vh - 70px - 50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   
 
 .card{
