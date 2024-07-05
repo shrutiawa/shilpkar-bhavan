@@ -4,14 +4,14 @@ import LocaleContext from "./localeContextProvider";
 
 const ProtectedRoute = ({ children }) => {
   const customerId = localStorage.getItem("customer");
-  const { canAccessOrderConfirm } = useContext(LocaleContext);
+  // const { canAccessOrderConfirm } = useContext(LocaleContext);
 
   if (!customerId) {
     return <Navigate to="/signin" />;
   }
-  if (window.location.pathname === '/order-confirm' && !canAccessOrderConfirm) {
-    return <Navigate to="/cart" />;
-  }
+  // if (window.location.pathname === '/order-confirm' && !canAccessOrderConfirm) {
+  //   return <Navigate to="/cart" />;
+  // }
   return children;
 };
 
