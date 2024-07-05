@@ -87,7 +87,7 @@ const Header = () => {
           <div className="button-container">
             <label className="switch">
               <input
-              name="langSwitch"
+                name="langSwitch"
                 type="checkbox"
                 onChange={switchLang}
                 checked={locale === "hi-IN"}
