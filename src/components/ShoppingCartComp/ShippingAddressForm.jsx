@@ -6,7 +6,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import { useQuery } from "@apollo/client";
 import GET_CARTADDRESS_CONTENT from "./graphql-address";
 import {useNavigate} from "react-router-dom";
-import LocaleContext from "../HelperComp/localeContextProvider";
+// import LocaleContext from "../HelperComp/localeContextProvider";
 
 function ShippingAddressForm({
   locale,
@@ -45,7 +45,7 @@ function ShippingAddressForm({
   const [step, setStep] = useState(0);
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState("card");
   const REACT_APP_BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-  const { setCanAccessOrderConfirm } = useContext(LocaleContext);
+  // const { setCanAccessOrderConfirm } = useContext(LocaleContext);
  
 
   const navigate = useNavigate();
@@ -117,7 +117,7 @@ function ShippingAddressForm({
     if (selectedPaymentMethod === "cod") {
       toast.success("Order placed successfully!");
       // window.location.href = "/order-confirm";
-      setCanAccessOrderConfirm(true);
+      // setCanAccessOrderConfirm(true);
       navigate("/order-confirm");
     } else if (selectedPaymentMethod === "card") {
       toast.info("Redirecting to Stripe Checkout...");
