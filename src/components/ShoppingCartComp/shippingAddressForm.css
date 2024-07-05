@@ -13,6 +13,11 @@
   padding:20px
 }
 
+.address-container p{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
 .form {
   display: grid;
   grid-gap: 1rem;
@@ -23,25 +28,25 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--color-lighter-gray);
   padding: 0.5rem;
   border-radius: 0.25rem;
  
 }
 
-.field__label {
-  color: var(--color-gray);
+.field__label { 
+   color: black;
   font-size: 18px;
   font-weight: 300;
   margin-bottom: 5px;
 }
 
 .field__input {
-  padding: 5px;
+  padding: 10px;
   margin: 0;
-  border: 1px solid black;
+  border: 1px solid rgb(178, 176, 176);
   width: 100%;
-  border-radius: 2px;
+  border-radius: 3px;
+  background: rgb(240, 240, 245);
 }
 .field:focus-within {
   border-color: #000;
