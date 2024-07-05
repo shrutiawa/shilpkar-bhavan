@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { loadStripe } from "@stripe/stripe-js";
 import { useQuery } from "@apollo/client";
 import GET_CARTADDRESS_CONTENT from "./graphql-address";
+import {useNavigate} from "react-router-dom";
 
 function ShippingAddressForm({
   locale,
@@ -43,6 +44,8 @@ function ShippingAddressForm({
   const [step, setStep] = useState(0);
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState("card");
   const REACT_APP_BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -110,7 +113,8 @@ function ShippingAddressForm({
   const handlePayment = async () => {
     if (selectedPaymentMethod === "cod") {
       toast.success("Order placed successfully!");
-      window.location.href = "/order-confirm";
+      // window.location.href = "/order-confirm";
+      navigate("/order-confirm");
     } else if (selectedPaymentMethod === "card") {
       toast.info("Redirecting to Stripe Checkout...");
       await stripeCheckout();
