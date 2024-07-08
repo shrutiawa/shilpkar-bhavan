@@ -54,10 +54,10 @@
     height: 40px;
   }
   .image-preview {
-    
-    object-fit: cover;
-    display: block;
-    margin: auto;
+    max-width: 100%;
+    max-height: 100px; 
+    object-fit: contain;
+    margin-top: 10px; 
   }
   .product-general-detail {
     border: 1px solid rgb(234, 232, 232);
